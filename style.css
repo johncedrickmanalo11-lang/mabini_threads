@@ -1,20 +1,20 @@
 :root{
-    --navy:#0b3852;
-    --sea:#146a99;
-    --sea-light:#e8f2f6;
-    --sand:#f6f2ee;
-    --white:#fffdfb;
+    --navy:#111111;
+    --sea:#4b9fc4;
+    --sea-light:#303030;
+    --sand:#202020;
+    --white:#292929;
     --coral:#e2694a;
-    --dark:#1c2b33;
-    --gray:#6f7a80;
-    --line:#e6dfd8;
-    --shadow:0 15px 45px rgba(11,56,82,.12);
+    --dark:#f1f1f1;
+    --gray:#b8b8b8;
+    --line:#414141;
+    --shadow:0 15px 45px rgba(0,0,0,.35);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:"DM Sans",sans-serif;background:var(--sand);color:var(--dark)}
-button,input,select{font-family:inherit}
+button,input,select{font-family:inherit;color:var(--dark)}
 button{cursor:pointer}
 a{text-decoration:none;color:inherit}
 
@@ -46,7 +46,7 @@ header{
     font-family:"Playfair Display",serif;
     font-size:26px;
     font-weight:700;
-    color:var(--navy);
+    color:var(--dark);
 }
 
 .logo span{color:var(--coral)}
@@ -533,3 +533,38 @@ footer a:hover{color:white}
     .music-info small{font-size:9px}
     .music-btn{width:34px;height:34px;font-size:14px}
 }
+
+/* Dark charcoal surfaces keep the full page consistent and readable. */
+.btn-white{background:#e8e8e8;color:#202020}
+.search,
+select,
+.category,
+.product,
+.product-img button,
+.opt-btn,
+.map-pin,
+.project-card,
+.modal-box,
+.form input,
+.form select,
+.cart-size-control select,
+.payment-method select,
+.tab.active{
+    background:var(--white);
+}
+
+.product-img,
+.color-preview,
+.cart-item-photo{
+    background:#353535;
+}
+
+.close{background:#414141;color:var(--dark)}
+.tabs{background:#383838}
+.order-status-step,
+.services-grid .service-btn{background:#383838}
+.service-btn{background:#303030}
+.footer-logo{color:var(--dark)}
+footer{background:#151515}
+.profile-voucher span{color:var(--dark)}
+input::placeholder{color:var(--gray)}
