@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MABINI THREADS — Wear the View. Carry Mabini With You.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="topbar">
+    <!-- 🎵 MUSIC PLAYER —  -->
+<div class="music-player" id="musicPlayer">
+    <audio id="bgMusic" loop>
+        <source src="die-with-a-smile.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="musicToggle" onclick="toggleMusic()" title="Play/Pause Music">
+        <span id="musicIcon">🎵</span>
+    </button>
+    <div class="music-info">
+        <strong>Die With A Smile</strong>
+        <small>Lady Gaga & Bruno Mars</small>
+    </div>
+    <button class="music-close" onclick="closeMusic()">×</button>
+</div>
+<!-- 🎵 END MUSIC PLAYER -->
+
+    MABINI THREADS — Wear the View. Carry Mabini With You.
+</div>
+
+<header>
+
+    <a href="#home" class="logo">
+        MABINI<span>THREADS</span>
+        <small>WEAR THE VIEW</small>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#explore">Explore Mabini</a>
+        <a href="#map">Map</a>
+        <a href="#about">About Creator</a>
+        <a href="#projects">My Projects</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="icon-btn" onclick="openWishlist()">
+            ♡ <span class="badge" id="wishlistCount">0</span>
+        </button>
+
+        <button class="account-btn" id="accountButton" onclick="handleAccountClick()">
+            <span id="accountButtonAvatar">👤</span>
+            <span class="account-label" id="accountButtonLabel">Create Account / Sign In</span>
+        </button>
+
+        <button class="icon-btn" onclick="openCart()">
+            🛒 <span class="badge" id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>MABINI, BATANGAS</small>
+
+        <h1>Wear the view.<br><em>Carry Mabini with you.</em></h1>
+
+        <p>
+            Explore Mabini's island coves, renowned dive sites, and scenic trails.
+            Your next Batangas adventure starts here.
+        </p>
+
+        <a href="#shop" class="btn btn-coral">Shop the Collection →</a>
+        <a href="#explore" class="btn btn-white">Explore Mabini</a>
+
+    </div>
+
+</section>
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop" id="shop">
+
+    <div class="shop-header">
+
+        <div class="section-title" style="margin:0">
+            <h2>Shop the <em>collection.</em></h2>
+        </div>
+
+    </div>
+
+    <div class="categories">
+        <button class="category active" onclick="filterProducts('all',this)">All Products</button>
+        <button class="category" onclick="filterProducts('shirts',this)">Shirts</button>
+    </div>
+
+    <div class="products" id="products"></div>
+
+</section>
+
+<!-- ================= EXPLORE MABINI ================= -->
+
+<section id="explore">
+
+    <div class="section-title">
+        <small>EXPLORE MABINI</small>
+        <h2>The places behind <em>every design.</em></h2>
+    </div>
+
+    <div class="destinations" id="destinations"></div>
+
+</section>
+
+<!-- ================= MAP ================= -->
+
+<section class="map-section" id="map">
+
+    <div class="section-title">
+        <small>MABINI TOURIST MAP</small>
+        <h2>Find your <em>next stop.</em></h2>
+    </div>
+
+    <div class="map-wrap">
+
+        <iframe
+        class="map-frame"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Mabini,Batangas&output=embed">
+        </iframe>
+
+        <div class="map-list" id="mapList"></div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT CREATOR ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-grid">
+
+        <div class="about-photo">JCM</div>
+
+        <div>
+
+            <small>MEET THE CREATOR</small>
+
+            <h2>John Cedrick Manalo<br><em>Web Developer & Designer</em></h2>
+
+            <p>
+                Hi! I'm John Cedrick Manalo, the creator of Mabini Threads.
+                This website combines my interest in web development,
+                e-commerce, design, and the beautiful places of my
+                hometown, Mabini, Batangas.
+            </p>
+
+            <p>
+                Mabini Threads is a personal portfolio project that
+                connects a clothing e-commerce platform with a tourism
+                information site — every product is named after a real
+                place in town.
+            </p>
+
+            <div class="skills">
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">Web Design</span>
+                <span class="skill-pill">UI/UX Design</span>
+                <span class="skill-pill">Database</span>
+                <span class="skill-pill">Responsive Development</span>
+            </div>
+
+            <div class="contact-row">
+                <span>📧 johncedrickmanalo11@gmail.com</span>
+                <span>🔗 facebook.com/jcmanalo</span>
+                <span>💻 github.com/jcmanalo</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="section-title">
+        <small>MY PROJECTS</small>
+        <h2>Previous <em>academic work.</em></h2>
+    </div>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <span class="project-tag">EDUCATION</span>
+            <h4>Student Portal</h4>
+            <p>A portal for students to access academic information and school services.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-tag">PHYSICS</span>
+            <h4>Projectile Motion</h4>
+            <p>An interactive project demonstrating projectile motion and its key variables.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-tag">STUDENT INFORMATION SYSTEM</span>
+            <h4>Student Management System</h4>
+            <p>A system for organizing student records and managing academic information.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-tag">TICKETING SYSTEM</span>
+            <h4>Anilao to Tingloy E-ticketing</h4>
+            <p>An e-ticketing project for managing trips between Anilao and Tingloy.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <div class="footer-logo">MABINI<span>THREADS</span></div>
+            <p>Wear the view. Carry Mabini, Batangas with you —
+            one design at a time.</p>
+        </div>
+
+        <div>
+            <h4>SHOP</h4>
+            <a href="#shop">All Products</a>
+            <a href="#shop">Shirts</a>
+            <a href="#shop">Hoodies</a>
+            <a href="#shop">Accessories</a>
+        </div>
+
+        <div>
+            <h4>EXPLORE</h4>
+            <a href="#explore">Destinations</a>
+            <a href="#map">Tourist Map</a>
+        </div>
+
+        <div>
+            <h4>ABOUT</h4>
+            <a href="#about">About Creator</a>
+            <a href="#projects">My Projects</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 MABINI THREADS</span>
+        <span>Mabini · Batangas ·  🇵🇭</span>
+    </div>
+
+</footer>
+
+<!-- ================= ACCOUNT MODAL ================= -->
+
+<div class="modal" id="accountModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('accountModal')">×</button>
+
+<h2 style="font-family:'Playfair Display';font-size:32px">Welcome to Mabini Threads</h2>
+<p style="color:var(--gray);margin-top:5px">Create an account or sign in to continue shopping.</p>
+<br>
+
+<div class="tabs">
+<button class="tab active" id="createTab" onclick="accountTab('create')">Create Account</button>
+<button class="tab" id="signinTab" onclick="accountTab('signin')">Sign In</button>
+</div>
+
+<div id="accountForm"></div>
+
+</div>
+</div>
+
+<!-- ================= PROFILE MODAL ================= -->
+
+<div class="modal" id="profileModal">
+<div class="modal-box wide">
+<button class="close" onclick="closeModal('profileModal')">×</button>
+<div id="profileContent"></div>
+</div>
+</div>
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal" id="cartModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('cartModal')">×</button>
+
+<h2 style="font-family:'Playfair Display';font-size:32px">Shopping Cart 🛒</h2>
+<p style="color:var(--gray)">Review your items before checkout.</p>
+
+<div id="cartItems"></div>
+<div id="cartAddressPreview"></div>
+
+<div class="cart-summary">
+<p><span>Subtotal</span><strong id="subtotal">₱0</strong></p>
+<p><span>Delivery Fee</span><strong id="deliveryFee">₱60</strong></p>
+<small id="shippingOfferNote" class="shipping-offer-note"></small>
+<hr>
+<div id="voucherPanel" class="voucher-panel" hidden>
+    <label for="useVoucher"><input id="useVoucher" type="checkbox" onchange="toggleAccountVoucher(this.checked)"> Use my account voucher</label>
+    <small id="voucherDetails"></small>
+</div>
+<p id="voucherDiscountRow" class="voucher-discount-row" hidden>
+    <span>Voucher discount</span><strong id="voucherDiscount">−₱0</strong>
+</p>
+<p class="cart-total"><span>Total</span><strong id="total">₱0</strong></p>
+
+<div class="payment-method">
+    <label for="paymentMethod">Payment method</label>
+    <select id="paymentMethod" onchange="updatePaymentNote()">
+        <option value="COD">Cash on Delivery (COD)</option>
+        <option value="GCash">GCash</option>
+        <option value="Maya">Maya</option>
+    </select>
+    <small id="paymentNote">Pay in cash when your order arrives.</small>
+</div>
+
+<button class="btn btn-coral" style="width:100%;margin-top:10px" onclick="checkout()">
+Proceed to Checkout →
+</button>
+
+</div>
+</div>
+</div>
+
+<!-- ================= ADD TO CART COLOR PICKER ================= -->
+
+<div class="modal" id="addToCartModal">
+<div class="modal-box color-picker-box">
+<button class="close" onclick="closeModal('addToCartModal')">×</button>
+<h2 style="font-family:'Playfair Display';font-size:30px">Choose color and size</h2>
+<p id="addProductDetails" style="color:var(--gray);margin-top:6px"></p>
+<img id="productColorPreview" class="color-preview" src="" alt="">
+<strong class="picker-label">Color</strong>
+<div id="productColorOptions" class="color-options"></div>
+<strong class="picker-label">Size</strong>
+<div id="productSizeOptions" class="color-options"></div>
+<button class="add-cart" style="margin-top:18px" onclick="confirmAddToCart()">Add selected options to Cart</button>
+</div>
+</div>
+
+<!-- ================= PRODUCT REVIEW ================= -->
+
+<div class="modal" id="reviewModal">
+<div class="modal-box review-box">
+<button class="close" onclick="closeModal('reviewModal')">×</button>
+<h2 style="font-family:'Playfair Display';font-size:30px">Rate this product</h2>
+<p id="reviewProductName" style="color:var(--gray);margin-top:6px"></p>
+<div class="review-stars" role="group" aria-label="Choose a rating from 1 to 5 stars">
+    <button type="button" aria-label="1 star" onclick="selectReviewRating(1)">★</button>
+    <button type="button" aria-label="2 stars" onclick="selectReviewRating(2)">★</button>
+    <button type="button" aria-label="3 stars" onclick="selectReviewRating(3)">★</button>
+    <button type="button" aria-label="4 stars" onclick="selectReviewRating(4)">★</button>
+    <button type="button" aria-label="5 stars" onclick="selectReviewRating(5)">★</button>
+</div>
+<p id="reviewRatingHint" class="review-rating-hint">Choose 1 to 5 stars.</p>
+<button id="submitReviewButton" class="add-cart" style="margin-top:18px" onclick="submitProductReview()" disabled>Submit rating</button>
+</div>
+</div>
+
+<!-- ================= WISHLIST ================= -->
+
+<div class="modal" id="wishlistModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('wishlistModal')">×</button>
+<h2 style="font-family:'Playfair Display';font-size:32px">My Wishlist ♡</h2>
+<div id="wishlistItems" style="margin-top:20px"></div>
+</div>
+</div>
+
+<!-- ================= DESTINATION DETAILS ================= -->
+
+<div class="modal" id="destinationModal">
+<div class="modal-box wide">
+<button class="close" onclick="closeModal('destinationModal')">×</button>
+<div id="destinationContent"></div>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+/* ================= 🎵 MUSIC PLAYER — BAGO LANG ================= */
+
+function toggleMusic(){
+    const music = document.getElementById("bgMusic");
+    const icon = document.getElementById("musicIcon");
+
+    if(music.paused){
+        music.play();
+        icon.textContent = "⏸";
+        showToast("🎵 Playing: Die With A Smile");
+    } else {
+        music.pause();
+        icon.textContent = "🎵";
+        showToast("⏸ Music paused");
+    }
+}
+
+function closeMusic(){
+    const music = document.getElementById("bgMusic");
+    music.pause();
+    document.getElementById("musicPlayer").style.display = "none";
+}
+
+document.getElementById("bgMusic").addEventListener("error", () => {
+    document.getElementById("musicPlayer").style.display = "none";
+});
+
+/* Auto-play on first user interaction */
+document.addEventListener("click", function autoPlayMusic(){
+    const music = document.getElementById("bgMusic");
+    if(music && music.paused){
+        music.play().then(() => {
+            document.getElementById("musicIcon").textContent = "⏸";
+        }).catch(() => {
+            /* browser blocked autoplay — user clicks manually */
+        });
+    }
+    document.removeEventListener("click", autoPlayMusic);
+}, { once: true });
+
+/* ================= END MUSIC PLAYER ================= */
+
+
+/* ================= HELPERS ================= */
+
+function money(value){
+    return "₱" + Number(value).toLocaleString("en-PH");
+}
+
+function initials(name){
+    return name.trim().split(/\s+/).slice(0,2).map(w=>w[0]?.toUpperCase() || "").join("");
+}
+
+function commonsImage(filename,width){
+    return "https://commons.wikimedia.org/wiki/Special:FilePath/"
+    + encodeURIComponent(filename) + "?width=" + width;
+}
+
+async function apiRequest(action,options={}){
+
+    const query = new URLSearchParams({action,...(options.query || {})});
+    const request = {
+        method:options.method || "GET",
+        credentials:"same-origin",
+        headers:options.body ? {"Content-Type":"application/json"} : {}
+    };
+    if(options.body)request.body = JSON.stringify(options.body);
+
+    let response;
+    try{
+        response = await fetch(`api.php?${query}`,request);
+    }catch(error){
+        throw new Error("Could not reach the local PHP API. Start the PHP server and open the site from http://127.0.0.1:8000.");
+    }
+
+    const contentType = response.headers.get("content-type") || "";
+    const text = await response.text();
+    if(!contentType.includes("application/json")){
+        const trimmed = text.trim();
+        if(trimmed.startsWith("<?php") || trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")){
+            throw new Error("This app must be opened through the local PHP server at http://127.0.0.1:8000. Do not open the HTML file directly.");
+        }
+        throw new Error("The PHP API returned an unexpected response. Check that the server is running.");
+    }
+
+    let data;
+    try{
+        data = JSON.parse(text);
+    }catch(error){
+        throw new Error("The PHP API returned invalid JSON. Check the PHP setup and MySQL connection.");
+    }
+
+    if(!response.ok)throw new Error(data.message || "The database request failed.");
+    return data;
+
+}
+
+/* ================= DESTINATIONS ================= */
+
+const destinations = [
+
+{
+    id:"anilao",
+    name:"Anilao",
+    tag:"Beach & Diving",
+    image: "Anilao.jpg",
+    creditText:"Photo via Wikimedia Commons (CC BY)",
+    creditUrl:"https://commons.wikimedia.org/wiki/File:Anilao,_Batanagas.JPG",
+    blurb:"The birthplace of Philippine scuba diving — a coastal barangay with over 50 dive sites, calm coves, and some of the richest coral biodiversity in the country.",
+    highlights:[
+        "50+ beginner-friendly dive sites nearby",
+        "Snorkeling and island-hopping day trips",
+        "Home base for boats to Sombrero Island",
+        "Sunset views over Balayan Bay"
+    ],
+    mapQuery:"Anilao, Mabini, Batangas"
+},
+
+{
+    id:"sombrero-island",
+    name:"Sombrero Island",
+    tag:"Island & Snorkeling",
+    image: "sombrero.jpg",
+    creditText:"Photo via Wikimedia Commons (CC BY-SA)",
+    creditUrl:"https://commons.wikimedia.org/wiki/File:Sombrero-island,_From_%22Dive_Solana%22_Anilao_-_panoramio.jpg",
+    blurb:"A small hat-shaped island just a short boat ride from Anilao, popular for snorkeling, photos, and as a stopover for hikers coming down from Mt. Gulugod Baboy.",
+    highlights:[
+        "Short boat ride from Anilao or Talaga Port",
+        "Clear water good for snorkeling",
+        "Popular photo spot for its hat-like shape",
+        "Bring your own drinking water — no facilities on the island"
+    ],
+    mapQuery:"Sombrero Island, Batangas"
+},
+
+{
+    id:"gulugod-baboy",
+    name:"Mt. Gulugod Baboy",
+    tag:"Hiking & Sunrise",
+    image:"gulugod.jpg",
+    creditText:"Photo via Wikimedia Commons (CC BY-SA)",
+    creditUrl:"https://commons.wikimedia.org/wiki/File:Batangasjf8549_01.JPG",
+    blurb:"A beginner-friendly mountain on the Calumpan Peninsula with three peaks and 360-degree views of Batangas Bay, Balayan Bay, and nearby islands.",
+    highlights:[
+        "Beginner-friendly trail, about 1-2 hours to summit",
+        "360-degree views from Pinagbanderahan peak",
+        "Popular overnight camping spot",
+        "Trailhead near Anilao's dive resorts"
+    ],
+    mapQuery:"Mount Gulugod Baboy, Batangas"
+},
+
+{
+    id:"camp-netanya",
+    name:"Camp Netanya",
+    tag:"Resort & Seaside Views",
+    image:"camp netanya.jpg",
+    creditText:"Illustrative resort photo via Unsplash",
+    creditUrl:"https://unsplash.com/",
+    blurb:"A Greek-inspired seaside resort in Mabini, known for its white-and-blue architecture and views of Batangas Bay.",
+    highlights:[
+        "Seaside resort in Mabini, Batangas",
+        "Scenic views of Batangas Bay",
+        "Pool and resort amenities",
+        "Check with the resort for current rates and access"
+    ],
+    mapQuery:"Camp Netanya, Mabini, Batangas"
+},
+
+{
+    id:"planet-dive",
+    name:"Planet Dive & Resort",
+    tag:"Diving & Resort",
+    image:"planet dive.jpg",
+    creditText:"Illustrative diving photo via Unsplash",
+    creditUrl:"https://unsplash.com/",
+    blurb:"A dive resort in Mabini offering access to the area's well-known underwater sites.",
+    highlights:[
+        "Dive resort in Mabini, Batangas",
+        "Explore nearby dive sites with local guides",
+        "Ask the resort about courses and dive trips",
+        "Confirm availability before visiting"
+    ],
+    mapQuery:"Planet Dive Resort, Mabini, Batangas"
+},
+
+{
+    id:"saltitude",
+    name:"Saltitude Dive & Beach Resort",
+    tag:"Diving & Beach",
+    image:"saltitude.jpg",
+    creditText:"Illustrative beach photo via Unsplash",
+    creditUrl:"https://unsplash.com/",
+    blurb:"A dive and beach resort in Mabini, a convenient base for enjoying the coastline and nearby dive sites.",
+    highlights:[
+        "Dive and beach resort in Mabini",
+        "Coastal setting near local dive sites",
+        "Ask about snorkeling and diving options",
+        "Check current services and access before visiting"
+    ],
+    mapQuery:"Saltitude Dive and Beach Resort, Mabini, Batangas"
+}
+
+];
+
+function renderDestinations(){
+
+    document.getElementById("destinations").innerHTML =
+    destinations.map(d => `
+        <button class="destination" style="background-image:url('${d.image}')" onclick="openDestination('${d.id}')">
+            <div class="destination-content">
+                <h3>${d.name}</h3>
+                <p>${d.tag}</p>
+                <div class="destination-tap">VIEW DETAILS →</div>
+            </div>
+        </button>
+    `).join("");
+
+    document.getElementById("mapList").innerHTML =
+    destinations.map(d => `
+        <div class="map-pin" onclick="openDestination('${d.id}')">
+            <div>
+                <h4>📍 ${d.name}</h4>
+                <span>${d.tag}</span>
+            </div>
+            <span class="link-btn">View →</span>
+        </div>
+    `).join("");
+
+}
+
+function openDestination(id){
+
+    const d = destinations.find(x=>x.id===id);
+    if(!d)return;
+
+    document.getElementById("destinationContent").innerHTML = `
+
+        <div class="dest-photo" style="background-image:url('${d.image}')"></div>
+
+        <div class="dest-credit">
+            <a href="${d.creditUrl}" target="_blank" rel="noopener">${d.creditText}</a>
+        </div>
+
+        <span class="dest-tag">${d.tag.toUpperCase()}</span>
+
+        <h2 style="font-family:'Playfair Display';font-size:30px;margin:8px 0 12px">${d.name}</h2>
+
+        <p style="color:var(--gray);line-height:1.7">${d.blurb}</p>
+
+        <ul class="dest-highlights">
+            ${d.highlights.map(h=>`<li>${h}</li>`).join("")}
+        </ul>
+
+        <a class="btn btn-coral" style="display:inline-block;margin-top:22px" target="_blank" rel="noopener"
+        href="https://www.google.com/maps/search/${encodeURIComponent(d.mapQuery)}">
+            Get Directions →
+        </a>
+
+    `;
+
+    document.getElementById("destinationModal").classList.add("show");
+
+}
+
+/* ================= PRODUCTS ================= */
+
+let products = [
+
+{
+    id:1,
+    name:"TSTK CLUB V1 Crop Shirt",
+    price:599,
+    rating:4.9,
+    category:"shirts",
+    inspiration:"TSTK CLUB",
+    sizes:["S","M","L","XL","XXL"],
+    colors:["Black","White"],
+    image:"V1_black.jpeg",
+},
+
+{
+    id:2,
+    name:"TSTK CLUB V2 Crop Shirt",
+    price:850,
+    rating:4.8,
+    category:"shirts",
+    inspiration:"Race Day",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V2_black.jpeg"
+},
+
+{
+    id:3,
+    name:"TSTK CLUB V3 Crop Shirt",
+    price:1299,
+    rating:4.9,
+    category:"hoodies",
+    inspiration:"Streetwear",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V3_black.jpeg"
+},
+
+{
+    id:4,
+    name:"TSTK CLUB V4 Crop Shirt",
+    price:950,
+    rating:4.7,
+    category:"shirts",
+    inspiration:"Limited Drop",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V4_black.jpeg"
+},
+
+{
+    id:5,
+    name:"TSTK CLUB V5 Crop Shirt",
+    price:720,
+    rating:4.7,
+    category:"shirts",
+    inspiration:"Club Collection",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V5.jpeg"
+},
+
+{
+    id:6,
+    name:"TSTK CLUB V6 Crop Shirt",
+    price:350,
+    rating:4.8,
+    category:"accessories",
+    inspiration:"Streetwear Essentials",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V6_black.jpeg"
+},
+
+{
+    id:7,
+    name:"TSTK CLUB V7 Crop Shirt",
+    price:299,
+    rating:4.6,
+    category:"accessories",
+    inspiration:"Club Gear",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V7_black.jpeg"
+},
+
+
+{
+    id:8,
+    name:"TSTK CLUB V8 Crop Shirt",
+    price:899,
+    rating:4.6,
+    category:"accessories",
+    inspiration:"Club Gear",
+    sizes:["S","M","L","XL"],
+    colors:["Black","White"],
+    image:"V8_black.jpeg"
+}
+
+];
+
+let cart = [];
+let wishlist = JSON.parse(localStorage.getItem("mabiniWishlist") || "[]");
+let account = null;
+let orders = [];
+let appReady = false;
+let staticDemo = false;
+let cartSaveQueue = Promise.resolve();
+let accountVoucherEnabled = false;
+
+let currentCategory = "all";
+let currentOrderFilter = "all";
+
+const productSelection = {};
+const productSlideIndexes = {};
+let productReviews = {};
+let pendingProductId = null;
+let pendingProductColor = null;
+let pendingProductSize = null;
+let pendingReviewProductId = null;
+let pendingReviewRating = 0;
+
+function getSelection(id){
+
+    if(!productSelection[id]){
+
+        const p = products.find(x=>x.id===id);
+
+        productSelection[id] = {
+            size: p.sizes[0] || null,
+            color: p.colors[0] || null
+        };
+
+    }
+
+    return productSelection[id];
+
+}
+
+function getProductImage(product, color){
+    const selectedColor = (color || product.colors[0] || "Black").toLowerCase();
+    const baseName = product.image
+        .replace(/_(black|white)(?=\.[^/.]+$)/i, "")
+        .replace(/\.[^/.]+$/, "");
+    const variant = `${baseName}_${selectedColor}.jpeg`;
+    return variant;
+}
+
+const ORDER_STEPS = ["Order Placed","To Ship","Shipped","Delivered"];
+
+/* ================= RENDER PRODUCTS ================= */
+
+function renderProducts(){
+
+    const list = products.filter(p => currentCategory === "all" || p.category === currentCategory);
+
+    document.getElementById("products").innerHTML =
+    list.map(p => {
+
+        const sel = getSelection(p.id);
+        const activeSlide = (productSlideIndexes[p.id] || 0) % p.colors.length;
+
+        return `
+
+        <article class="product">
+
+            <div class="product-img">
+                <div class="product-slideshow" data-product-id="${p.id}" data-active-index="${activeSlide}">
+                    ${p.colors.map((color,index) => `
+                        <img class="product-photo ${index===activeSlide?'active':''}" src="${getProductImage(p, color)}" alt="${p.name} in ${color}">
+                    `).join("")}
+                </div>
+                <button onclick="toggleWishlist(${p.id})">${wishlist.includes(p.id) ? "♥" : "♡"}</button>
+            </div>
+
+            <div class="product-info">
+
+                <small>Inspired by ${p.inspiration}</small>
+                <h3>${p.name}</h3>
+
+                ${p.ratingCount > 0 ? `
+                    <div class="rating">
+                        ${"★".repeat(Math.round(p.rating))}${"☆".repeat(5-Math.round(p.rating))}
+                        <span style="color:#777">${Number(p.rating).toFixed(1)} (${p.ratingCount})</span>
+                    </div>
+                ` : ""}
+
+                <div class="price">${money(p.price)}</div>
+
+                <button class="add-cart" onclick="addProduct(${p.id})">Add to Cart</button>
+
+            </div>
+
+        </article>
+
+        `;
+
+    }).join("");
+
+}
+
+/* ================= ADD TO CART ================= */
+
+function requireAccount(){
+
+    if(!appReady){
+        showToast("Connecting to the local database. Please wait.");
+        return false;
+    }
+
+    if(staticDemo){
+        showToast("Shopping accounts and checkout need PHP/MySQL hosting.");
+        return false;
+    }
+
+    if(account)return true;
+
+    closeModal("addToCartModal");
+    showToast("Please create an account or sign in before shopping.");
+    openAccount("create");
+    return false;
+
+}
+
+function addProduct(id){
+
+    if(!requireAccount())return;
+
+    const product = products.find(p=>p.id===id);
+    if(!product)return;
+
+    pendingProductId = id;
+    pendingProductColor = getSelection(id).color || product.colors[0];
+    pendingProductSize = getSelection(id).size || product.sizes[0] || null;
+    document.getElementById("addProductDetails").innerHTML = `
+        <strong>${product.name}</strong><br>
+        ${money(product.price)}
+    `;
+    updateProductColorPreview();
+    document.getElementById("addToCartModal").classList.add("show");
+
+}
+
+function updateProductColorPreview(){
+
+    const product = products.find(p=>p.id===pendingProductId);
+    if(!product)return;
+
+    const preview = document.getElementById("productColorPreview");
+    preview.src = getProductImage(product, pendingProductColor);
+    preview.alt = `${product.name} in ${pendingProductColor}`;
+    document.getElementById("productColorOptions").innerHTML = product.colors.map(color=>`
+        <button class="opt-btn ${pendingProductColor===color?'active':''}"
+        onclick="selectProductColor('${color}')">${color}</button>
+    `).join("");
+    document.getElementById("productSizeOptions").innerHTML = product.sizes.map(size=>`
+        <button class="opt-btn ${pendingProductSize===size?'active':''}"
+        onclick="selectProductSize('${size}')">${size}</button>
+    `).join("");
+
+}
+
+function selectProductColor(color){
+
+    pendingProductColor = color;
+    updateProductColorPreview();
+
+}
+
+function selectProductSize(size){
+
+    pendingProductSize = size;
+    updateProductColorPreview();
+
+}
+
+function confirmAddToCart(){
+
+    if(!requireAccount())return;
+    if(pendingProductId===null || !pendingProductColor || !pendingProductSize)return;
+
+    const product = products.find(p=>p.id===pendingProductId);
+    const sel = getSelection(pendingProductId);
+    sel.color = pendingProductColor;
+    sel.size = pendingProductSize;
+
+    const existing = cart.find(item=>
+        item.id===pendingProductId && item.size===sel.size && item.color===pendingProductColor
+    );
+
+    if(existing){
+
+        existing.quantity += 1;
+
+    }else{
+
+        cart.push({
+            id:product.id,
+            name:product.name,
+            price:product.price,
+            size:sel.size,
+            color:pendingProductColor,
+            quantity:1
+        });
+
+    }
+
+    saveCart();
+
+    showToast(product.name + " added to your cart!");
+    closeModal("addToCartModal");
+    pendingProductId = null;
+    pendingProductColor = null;
+
+}
+
+function advanceProductSlides(){
+
+    document.querySelectorAll(".product-slideshow").forEach(slideshow=>{
+        const productId = Number(slideshow.dataset.productId);
+        const imageCount = slideshow.children.length;
+        if(imageCount < 2)return;
+
+        const activeIndex = (Number(slideshow.dataset.activeIndex) + 1) % imageCount;
+        slideshow.dataset.activeIndex = activeIndex;
+        productSlideIndexes[productId] = activeIndex;
+        Array.from(slideshow.children).forEach((image,index)=>{
+            image.classList.toggle("active", index===activeIndex);
+        });
+    });
+
+}
+
+/* ================= CART ================= */
+
+function saveCart(){
+
+    updateCartCount();
+    renderCart();
+
+    if(!account || !appReady)return;
+
+    const items = cart.map(item=>({
+        id:item.id,
+        size:item.size,
+        color:item.color,
+        quantity:item.quantity
+    }));
+
+    cartSaveQueue = cartSaveQueue
+        .catch(()=>{})
+        .then(()=>apiRequest("cart-save",{method:"POST",body:{items}}))
+        .catch(error=>showToast(error.message));
+
+}
+
+function updateCartCount(){
+
+    const count = cart.reduce((total,item)=>total+item.quantity,0);
+    document.getElementById("cartCount").textContent = count;
+
+}
+
+function renderCart(){
+
+    const container = document.getElementById("cartItems");
+
+    if(!cart.length){
+
+        container.innerHTML = `
+            <div style="text-align:center;padding:35px;color:#777">
+                🛒<br><br>Your cart is empty.<br><br>
+                Head to the shop and find your next favorite piece!
+            </div>
+        `;
+
+    }else{
+
+        container.innerHTML = cart.map((item,index) => {
+            const product = products.find(p=>p.id===item.id);
+            const image = product ? getProductImage(product,item.color) : "";
+
+            return `
+
+            <div class="cart-item">
+
+                <img class="cart-item-photo" src="${image}" alt="${item.name} in ${item.color}">
+
+                <div>
+                    <strong>${item.name}</strong>
+                    ${product ? `
+                        <label class="cart-size-control">Size
+                            <select aria-label="Size for ${item.name}" onchange="changeCartSize(${index},this.value)">
+                                ${product.sizes.map(size=>`
+                                    <option value="${size}" ${item.size===size?'selected':''}>${size}</option>
+                                `).join("")}
+                            </select>
+                        </label>
+                    ` : ""}
+                    <small>
+                        ${[item.color,item.size].filter(Boolean).join(" · ")}
+                        — ${money(item.price)} each
+                    </small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:8px">
+                    <button class="btn btn-outline btn-sm" onclick="changeCartQty(${index},-1)">−</button>
+                    <span>${item.quantity}</span>
+                    <button class="btn btn-outline btn-sm" onclick="changeCartQty(${index},1)">+</button>
+                </div>
+
+                <div>
+                    <strong>${money(item.price * item.quantity)}</strong>
+                    <button class="remove" onclick="removeCart(${index})">×</button>
+                </div>
+
+            </div>
+
+        `;
+        }).join("");
+
+    }
+
+    const subtotal = cart.reduce((sum,item)=>sum + item.price * item.quantity,0);
+    const deliveryFee = calculateShippingFee(subtotal);
+    const voucherAvailable = Boolean(account?.voucherPercent && account.voucherCode && !account.voucherUsed);
+    const voucherPanel = document.getElementById("voucherPanel");
+    voucherPanel.hidden = !cart.length || !account?.voucherCode;
+    document.getElementById("useVoucher").checked = voucherAvailable && accountVoucherEnabled;
+    document.getElementById("useVoucher").disabled = !voucherAvailable;
+    document.getElementById("voucherDetails").textContent = account?.voucherCode
+        ? `${account.voucherPercent}% off · ${account.voucherCode}${account.voucherUsed ? " · Already used" : " · One-time use"}`
+        : "";
+    const voucherDiscount = voucherAvailable && accountVoucherEnabled
+        ? Math.round((subtotal * account.voucherPercent / 100 + Number.EPSILON) * 100) / 100
+        : 0;
+    document.getElementById("voucherDiscountRow").hidden = voucherDiscount===0;
+    document.getElementById("voucherDiscount").textContent = "−" + money(voucherDiscount);
+    document.getElementById("shippingOfferNote").textContent = subtotal >= 9000
+        ? "Free shipping unlocked at ₱9,000."
+        : subtotal >= 6000
+            ? "₱40 off shipping at ₱6,000 spend."
+            : subtotal >= 3000
+                ? "₱20 off shipping at ₱3,000 spend."
+                : "Spend ₱3,000 for ₱20 off shipping; ₱9,000 for free shipping.";
+
+    document.getElementById("subtotal").textContent = money(subtotal);
+    document.getElementById("deliveryFee").textContent = deliveryFee===0 ? "FREE" : money(deliveryFee);
+    document.getElementById("total").textContent = money(subtotal + deliveryFee - voucherDiscount);
+
+    renderCartAddressPreview();
+
+}
+
+function calculateShippingFee(subtotal){
+
+    if(subtotal >= 9000)return 0;
+    if(subtotal >= 6000)return 20;
+    if(subtotal >= 3000)return 40;
+    return subtotal > 0 ? 60 : 0;
+
+}
+
+function toggleAccountVoucher(enabled){
+
+    accountVoucherEnabled = enabled;
+    renderCart();
+
+}
+
+function renderCartAddressPreview(){
+
+    const box = document.getElementById("cartAddressPreview");
+
+    if(!account){ box.innerHTML=""; return; }
+
+    if(!account.address){
+
+        box.innerHTML = `
+            <div class="address-card" style="margin:18px 0;background:#faf6ee">
+                <strong style="font-size:13px">DELIVERY ADDRESS</strong>
+                <p style="color:var(--gray);margin-top:6px">No delivery address on file yet.</p>
+                <button class="btn btn-outline btn-sm" style="margin-top:10px"
+                onclick="closeModal('cartModal');openProfile('address')">Add Address</button>
+            </div>
+        `;
+
+    }else{
+
+        const a = account.address;
+
+        box.innerHTML = `
+            <div class="address-card" style="margin:18px 0;background:#faf6ee">
+                <strong style="font-size:13px">DELIVERY ADDRESS</strong>
+                <p style="margin-top:6px">
+                    ${a.recipient}<br>
+                    ${a.street}, Brgy. ${a.barangay}<br>
+                    ${a.city}, ${a.province}, ${a.region}<br>
+                    📱 ${a.phone}
+                </p>
+                <button class="btn btn-outline btn-sm" style="margin-top:10px"
+                onclick="closeModal('cartModal');openProfile('address')">Edit Address</button>
+            </div>
+        `;
+
+    }
+
+}
+
+function changeCartQty(index,amount){
+
+    cart[index].quantity = Math.max(1, cart[index].quantity + amount);
+    saveCart();
+
+}
+
+function changeCartSize(index,size){
+
+    const item = cart[index];
+    const product = item && products.find(candidate=>candidate.id===item.id);
+    if(!item || !product || !product.sizes.includes(size))return;
+
+    const matchingItem = cart.findIndex((candidate,candidateIndex)=>
+        candidateIndex!==index && candidate.id===item.id
+        && candidate.color===item.color && candidate.size===size
+    );
+
+    if(matchingItem>=0){
+        cart[matchingItem].quantity += item.quantity;
+        cart.splice(index,1);
+    }else{
+        item.size = size;
+    }
+
+    saveCart();
+    showToast("Cart size updated.");
+
+}
+
+function removeCart(index){
+
+    cart.splice(index,1);
+    saveCart();
+    showToast("Product removed.");
+
+}
+
+function openCart(){
+
+    renderCart();
+    document.getElementById("cartModal").classList.add("show");
+
+}
+
+function updatePaymentNote(){
+
+    const notes = {
+        COD:"Pay in cash when your order arrives.",
+        GCash:"GCash selected. Payment is arranged manually after placing your order.",
+        Maya:"Maya selected. Payment is arranged manually after placing your order."
+    };
+    document.getElementById("paymentNote").textContent =
+        notes[document.getElementById("paymentMethod").value] || notes.COD;
+
+}
+
+/* ================= WISHLIST ================= */
+
+function toggleWishlist(id){
+
+    if(wishlist.includes(id)){
+        wishlist = wishlist.filter(x=>x!==id);
+        showToast("Removed from wishlist.");
+    }else{
+        wishlist.push(id);
+        showToast("Added to wishlist.");
+    }
+
+    localStorage.setItem("mabiniWishlist", JSON.stringify(wishlist));
+    document.getElementById("wishlistCount").textContent = wishlist.length;
+    renderProducts();
+
+}
+
+function openWishlist(){
+
+    const container = document.getElementById("wishlistItems");
+    const items = products.filter(p => wishlist.includes(p.id));
+
+    if(!items.length){
+
+        container.innerHTML = "<p class='empty-note'>Your wishlist is empty.</p>";
+
+    }else{
+
+        container.innerHTML = items.map(p=>`
+
+            <div style="padding:15px 0;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;align-items:center">
+                <div>
+                    <strong>${p.name}</strong><br>
+                    ${money(p.price)}
+                </div>
+                <div style="display:flex;gap:8px">
+                    <button class="btn btn-coral btn-sm" onclick="addProduct(${p.id})">Add to Cart</button>
+                    <button class="btn btn-outline btn-sm" onclick="toggleWishlist(${p.id});openWishlist()">Remove</button>
+                </div>
+            </div>
+
+        `).join("");
+
+    }
+
+    document.getElementById("wishlistModal").classList.add("show");
+
+}
+
+/* ================= FILTER / SEARCH ================= */
+
+function filterProducts(category,button){
+
+    currentCategory = category;
+    document.querySelectorAll(".category").forEach(x=>x.classList.remove("active"));
+    button.classList.add("active");
+    renderProducts();
+
+}
+
+/* ================= ACCOUNT ================= */
+
+async function loadAccountData(){
+
+    const [cartData,orderData,reviewData] = await Promise.all([
+        apiRequest("cart"),
+        apiRequest("orders"),
+        apiRequest("reviews")
+    ]);
+    cart = cartData.items;
+    orders = orderData.orders;
+    productReviews = reviewData.reviews;
+    accountVoucherEnabled = Boolean(account?.voucherPercent && account.voucherCode && !account.voucherUsed);
+    updateCartCount();
+    renderCart();
+
+}
+
+function handleAccountClick(tab){
+
+    if(staticDemo){
+        showToast("Accounts and checkout need PHP/MySQL hosting.");
+        return;
+    }
+
+    if(account){ openProfile(); }
+    else{ openAccount(tab || "create"); }
+
+}
+
+function openAccount(tab="create"){
+
+    document.getElementById("accountModal").classList.add("show");
+    accountTab(tab);
+
+}
+
+function accountTab(type){
+
+    const createTab = document.getElementById("createTab");
+    const signinTab = document.getElementById("signinTab");
+
+    createTab.classList.remove("active");
+    signinTab.classList.remove("active");
+
+    if(type==="create"){
+
+        createTab.classList.add("active");
+
+        document.getElementById("accountForm").innerHTML = `
+            <div class="form">
+                <label>Full Name <input id="regName" placeholder="Your full name"></label>
+                <label>Email Address <input id="regEmail" type="email" placeholder="you@example.com"></label>
+                <label>Phone Number <input id="regPhone" placeholder="09XXXXXXXXX"></label>
+                <label>Password <input id="regPassword" type="password" placeholder="Create a password"></label>
+                <button onclick="createAccount()">Create Account</button>
+            </div>
+        `;
+
+    }else{
+
+        signinTab.classList.add("active");
+
+        document.getElementById("accountForm").innerHTML = `
+            <div class="form">
+                <label>Email Address <input id="loginEmail" type="email" placeholder="you@example.com"></label>
+                <label>Password <input id="loginPassword" type="password" placeholder="Your password"></label>
+                <button onclick="signIn()">Sign In</button>
+            </div>
+        `;
+
+    }
+
+}
+
+async function createAccount(){
+
+    const name = document.getElementById("regName").value.trim();
+    const email = document.getElementById("regEmail").value.trim();
+    const phone = document.getElementById("regPhone").value.trim();
+    const password = document.getElementById("regPassword").value;
+
+    if(!name || !email || !password){
+        showToast("Please complete all fields.");
+        return;
+    }
+
+    try{
+        const result = await apiRequest("register",{
+            method:"POST",
+            body:{name,email,phone,password}
+        });
+        account = result.user;
+        await loadAccountData();
+        updateAccountButton();
+        showToast("Account created!");
+        closeModal("accountModal");
+        openProfile();
+    }catch(error){
+        showToast(error.message);
+    }
+
+}
+
+async function signIn(){
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value;
+
+    if(!email || !password){
+        showToast("Enter your email and password.");
+        return;
+    }
+
+    try{
+        const result = await apiRequest("login",{
+            method:"POST",
+            body:{email,password}
+        });
+        account = result.user;
+        await loadAccountData();
+        updateAccountButton();
+        showToast("Signed in successfully!");
+        closeModal("accountModal");
+        openProfile();
+    }catch(error){
+        showToast(error.message);
+    }
+
+}
+
+async function logout(){
+
+    try{
+        await apiRequest("logout",{method:"POST"});
+    }catch(error){
+        showToast(error.message);
+        return;
+    }
+
+    account = null;
+    cart = [];
+    orders = [];
+    accountVoucherEnabled = false;
+    updateAccountButton();
+    updateCartCount();
+    renderCart();
+    closeModal("profileModal");
+    showToast("You have been logged out.");
+
+}
+
+function updateAccountButton(){
+
+    const avatar = document.getElementById("accountButtonAvatar");
+    const label = document.getElementById("accountButtonLabel");
+
+    if(account){
+        avatar.innerHTML = `<span class="account-avatar">${initials(account.name) || "👤"}</span>`;
+        label.textContent = account.name;
+    }else{
+        avatar.innerHTML = "👤";
+        label.textContent = staticDemo ? "Portfolio Demo" : "Create Account / Sign In";
+    }
+
+}
+
+/* ================= PROFILE DASHBOARD ================= */
+
+function openProfile(section){
+
+    if(!account){ openAccount("signin"); return; }
+
+    renderProfile();
+    document.getElementById("profileModal").classList.add("show");
+
+    if(section){
+        setTimeout(()=>{
+            const target = document.getElementById("profile-" + section);
+            if(target) target.scrollIntoView({block:"start"});
+        },50);
+    }
+
+}
+
+function renderProfile(){
+
+    const counts = {placed:0, toship:0, shipped:0, delivered:0};
+
+    orders.forEach(o=>{
+        if(o.status==="Order Placed") counts.placed++;
+        if(o.status==="To Ship") counts.toship++;
+        if(o.status==="Shipped") counts.shipped++;
+        if(o.status==="Delivered") counts.delivered++;
+    });
+
+    document.getElementById("profileContent").innerHTML = `
+
+        <div class="profile-header">
+            <div class="profile-avatar">${initials(account.name) || "👤"}</div>
+            <div class="profile-header-info">
+                <h3>${account.name}</h3>
+                <p>${account.email}</p>
+            </div>
+        </div>
+
+        ${account.voucherCode ? `
+            <div class="profile-voucher">
+                <strong>${account.voucherPercent}% account voucher</strong>
+                <span>${account.voucherCode}</span>
+                <small>${account.voucherUsed ? "Already used" : "One-time voucher available at checkout"}</small>
+            </div>
+        ` : ""}
+
+        <div class="profile-section" id="profile-orders">
+
+            <div class="profile-section-title">
+                <h4>MY ORDERS</h4>
+                <button class="link-btn" onclick="renderOrderList()">Refresh</button>
+            </div>
+
+            <div class="order-list" id="orderList"></div>
+
+        </div>
+
+        <div class="profile-section" id="profile-services">
+            <div class="profile-section-title"><h4>MY SERVICES</h4></div>
+            <div class="services-grid">
+                <button class="service-btn" onclick="closeModal('profileModal');openWishlist()"><span class="emoji">♡</span> Wishlist</button>
+                <button class="service-btn" onclick="openProfile('address')"><span class="emoji">📍</span> Address</button>
+                <button class="service-btn" onclick="closeModal('profileModal');openCart()"><span class="emoji">🛒</span> My Cart</button>
+                <button class="service-btn" onclick="openProfile('orders')"><span class="emoji">📦</span> My Orders</button>
+                <button class="service-btn" onclick="document.getElementById('about').scrollIntoView();closeModal('profileModal')"><span class="emoji">👨‍💻</span> About Creator</button>
+                <button class="service-btn" onclick="document.getElementById('explore').scrollIntoView();closeModal('profileModal')"><span class="emoji">🌊</span> Explore Mabini</button>
+            </div>
+        </div>
+
+        <div class="profile-section" id="profile-address">
+
+            <div class="profile-section-title">
+                <h4>DELIVERY ADDRESS</h4>
+                <button class="link-btn" onclick="toggleAddressForm()">${account.address ? "Edit" : "Add"}</button>
+            </div>
+
+            <div id="addressDisplay"></div>
+            <div id="addressForm"></div>
+
+        </div>
+
+        <div class="profile-section" id="profile-settings">
+            <div class="profile-section-title"><h4>ACCOUNT SETTINGS</h4></div>
+            <div class="settings-list">
+                <a href="#" onclick="event.preventDefault();toggleAddressForm(true)">Personal Information <span>›</span></a>
+                <a href="#" onclick="event.preventDefault();showToast('Password change is not available in this demo.')">Password <span>›</span></a>
+                <a href="#" onclick="event.preventDefault();openProfile('address')">Delivery Address <span>›</span></a>
+                <a href="#" onclick="event.preventDefault();openProfile('orders')">My Orders <span>›</span></a>
+                <a href="#" onclick="event.preventDefault();closeModal('profileModal');openWishlist()">Wishlist <span>›</span></a>
+            </div>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+
+    `;
+
+    renderAddressSection();
+    renderOrderList();
+
+}
+
+function renderOrderList(){
+
+    const list = document.getElementById("orderList");
+    if(!list) return;
+
+    if(!orders.length){
+        list.innerHTML = `<p class="empty-note">No orders yet. Place one from the cart to see it tracked here.</p>`;
+        return;
+    }
+
+    list.innerHTML = [...orders].reverse().map(order=>{
+
+        const itemsMarkup = order.items.map(item=>{
+            const rating = Number(productReviews[item.id] || 0);
+            const delivered = order.status==="Delivered";
+            const options = [item.color,item.size].filter(Boolean).join(" · ");
+            return `
+                <div class="order-review-item">
+                    <span>${item.name}${options ? ` (${options})` : ""} × ${item.quantity}</span>
+                    ${rating
+                        ? `<span class="customer-rating">Your rating: ${"★".repeat(rating)}${"☆".repeat(5-rating)}</span>`
+                        : delivered
+                            ? `<button class="btn btn-outline btn-sm" onclick="openProductReview(${item.id})">Rate product</button>`
+                            : `<small class="rating-pending">Rate after delivery</small>`}
+                </div>
+            `;
+        }).join("");
+
+        const stepIndex = ORDER_STEPS.indexOf(order.status);
+
+        return `
+
+            <div class="order-card">
+
+                <div class="order-status-track">
+                    ${ORDER_STEPS.map((s,i)=>`
+                        <div class="order-status-step ${i<=stepIndex ? 'done':''}">${s}</div>
+                    `).join("")}
+                </div>
+
+                <div class="order-card-top">
+                    <div>
+                        <strong>Order #MBN-${order.id}</strong>
+                        <div style="font-size:12px;color:var(--gray);margin-top:2px">${order.date}</div>
+                        <div style="font-size:12px;color:var(--gray);margin-top:2px">Payment: ${order.paymentMethod || "COD"}</div>
+                        <div style="font-size:12px;color:var(--gray);margin-top:2px">Shipping: ${money(order.shippingFee || 0)} · Discount: ${money(order.discountAmount || 0)}</div>
+                        ${order.voucherCode ? `<div style="font-size:12px;color:var(--gray);margin-top:2px">Voucher: ${order.voucherCode}</div>` : ""}
+                    </div>
+                </div>
+
+                <div class="order-items">${itemsMarkup}</div>
+
+                <div class="order-card-bottom">
+                    <strong>${money(order.total)}</strong>
+                    ${stepIndex < ORDER_STEPS.length-1 ? `
+                        <button class="btn btn-outline btn-sm" onclick="advanceOrder(${order.id})">
+                            ${["Start processing","Mark shipped","Confirm delivery"][stepIndex]}
+                        </button>
+                    ` : `<span class="link-btn" style="cursor:default">Order complete · Delivered ✓</span>`}
+                </div>
+
+            </div>
+
+        `;
+
+    }).join("");
+
+}
+
+function openProductReview(productId){
+
+    const product = products.find(item=>item.id===productId);
+    if(!account || !product || productReviews[productId])return;
+
+    pendingReviewProductId = productId;
+    pendingReviewRating = 0;
+    document.getElementById("reviewProductName").textContent = product.name;
+    document.getElementById("reviewRatingHint").textContent = "Choose 1 to 5 stars.";
+    document.getElementById("submitReviewButton").disabled = true;
+    document.querySelectorAll(".review-stars button").forEach(button=>button.classList.remove("active"));
+    document.getElementById("reviewModal").classList.add("show");
+
+}
+
+function selectReviewRating(rating){
+
+    pendingReviewRating = rating;
+    document.querySelectorAll(".review-stars button").forEach((button,index)=>{
+        button.classList.toggle("active",index<rating);
+    });
+    document.getElementById("reviewRatingHint").textContent = `${rating} out of 5 stars selected.`;
+    document.getElementById("submitReviewButton").disabled = false;
+
+}
+
+async function submitProductReview(){
+
+    if(!pendingReviewProductId || !pendingReviewRating)return;
+
+    try{
+        await apiRequest("product-review",{
+            method:"POST",
+            body:{product_id:pendingReviewProductId,rating:pendingReviewRating}
+        });
+        const [productData,reviewData] = await Promise.all([
+            apiRequest("products"),
+            apiRequest("reviews")
+        ]);
+        products = productData.products;
+        productReviews = reviewData.reviews;
+        closeModal("reviewModal");
+        pendingReviewProductId = null;
+        pendingReviewRating = 0;
+        renderProducts();
+        renderOrderList();
+        showToast("Thanks for rating this product!");
+    }catch(error){
+        showToast(error.message);
+    }
+
+}
+
+async function advanceOrder(id){
+
+    const order = orders.find(o=>o.id===id);
+    if(!order) return;
+
+    try{
+        const result = await apiRequest("order-advance",{
+            method:"POST",
+            body:{order_id:id}
+        });
+        order.status = result.status;
+        renderProfile();
+        showToast("Order #MBN-" + id + " is now: " + order.status);
+    }catch(error){
+        showToast(error.message);
+    }
+}
+
+/* ================= ADDRESS ================= */
+
+let isNormalizingDeliveryAddress = false;
+
+async function resolveSavedAddress(address){
+
+    const findLocation = (locations,value)=>locations.find(location=>
+        location.code===String(value) || location.name===String(value)
+    );
+
+    const regions = await fetchAddressOptions("regions");
+    const region = findLocation(regions,address.region);
+    if(!region)return null;
+
+    const provinces = await fetchAddressOptions("provinces",region.code);
+    let province = null;
+    let cities;
+    if(provinces.length){
+        province = findLocation(provinces,address.province);
+        if(!province)return null;
+        cities = await fetchAddressOptions("cities",province.code,"province");
+    }else{
+        cities = await fetchAddressOptions("cities",region.code,"region");
+    }
+
+    const city = findLocation(cities,address.city);
+    if(!city)return null;
+    const barangays = await fetchAddressOptions("barangays",city.code);
+    const barangay = findLocation(barangays,address.barangay);
+    if(!barangay)return null;
+
+    return {
+        ...address,
+        region:region.name,
+        province:province?.name || "NCR",
+        city:city.name,
+        barangay:barangay.name,
+    };
+
+}
+
+function renderAddressSection(){
+
+    const display = document.getElementById("addressDisplay");
+    const form = document.getElementById("addressForm");
+    form.style.display = "none";
+
+    if(!account.address){
+
+        display.innerHTML = `
+            <p class="empty-note" style="text-align:left;padding:0 0 6px">
+                You haven't added a delivery address yet. Add one so checkout goes faster.
+            </p>
+        `;
+
+    }else{
+
+        const a = account.address;
+        const hasPsgcCodes = [a.region,a.province,a.city,a.barangay]
+            .some(value=>/^\d{9}$/.test(String(value || "")));
+
+        if(hasPsgcCodes){
+            display.innerHTML = `
+                <p class="empty-note" style="text-align:left;padding:0 0 6px">
+                    Updating saved delivery location names...
+                </p>
+            `;
+
+            if(!isNormalizingDeliveryAddress){
+                isNormalizingDeliveryAddress = true;
+                resolveSavedAddress(a).then(async normalized=>{
+                    if(!normalized || account?.address!==a){
+                        throw new Error("Could not match the saved address codes to PSGC locations.");
+                    }
+                    const result = await apiRequest("address-save",{
+                        method:"POST",
+                        body:normalized
+                    });
+                    if(account?.address!==a)return;
+                    account = result.user;
+                    renderAddressSection();
+                    renderCartAddressPreview();
+                }).catch(error=>{
+                    if(account?.address===a){
+                        display.innerHTML = `
+                            <p class="empty-note" style="text-align:left;padding:0 0 6px">
+                                Could not update the saved location names. Reopen this address while online to retry.
+                            </p>
+                        `;
+                        showToast(error.message);
+                    }
+                }).finally(()=>{
+                    isNormalizingDeliveryAddress = false;
+                });
+            }
+            return;
+        }
+
+        display.innerHTML = `
+            <div class="address-card">
+                <p>
+                    <strong>${a.recipient}</strong><br>
+                    ${a.street}, Brgy. ${a.barangay}<br>
+                    ${a.city}, ${a.province}, ${a.region}<br>
+                    📱 ${a.phone}
+                </p>
+            </div>
+        `;
+
+    }
+
+}
+
+function toggleAddressForm(forceOpen){
+
+    const form = document.getElementById("addressForm");
+    const display = document.getElementById("addressDisplay");
+    const opening = forceOpen || form.style.display === "none";
+
+    if(!opening){
+        form.style.display = "none";
+        display.style.display = "block";
+        return;
+    }
+
+    const a = account.address || {};
+    display.style.display = "none";
+    form.style.display = "block";
+
+    form.innerHTML = `
+
+        <div class="form" style="margin-top:6px">
+
+            <label>Recipient Name <input id="addrName" value="${a.recipient || account.name || ""}"></label>
+            <label>Phone Number <input id="addrPhone" value="${a.phone || account.phone || ""}" placeholder="09XXXXXXXXX"></label>
+
+            <label>Region
+                <select id="addrRegion" required><option value="">Loading regions...</option></select>
+            </label>
+            <label>Province
+                <select id="addrProvince" required disabled><option value="">Select a region first</option></select>
+            </label>
+            <label>City / Municipality
+                <select id="addrCity" required disabled><option value="">Select a province first</option></select>
+            </label>
+            <label>Barangay
+                <select id="addrBarangay" required disabled><option value="">Select a city / municipality first</option></select>
+            </label>
+
+            <label>Street / House No. <input id="addrStreet" value="${a.street || ""}" placeholder="House No., Street"></label>
+
+            <button onclick="saveAddress()">Save Address</button>
+
+        </div>
+
+    `;
+
+    populateAddressSelects(a).catch(error=>showToast(error.message));
+
+}
+
+const addressOptionsCache = {};
+
+async function fetchAddressOptions(level,code="",parentType=""){
+
+    const cacheKey = `${level}:${parentType}:${code}`;
+    if(addressOptionsCache[cacheKey])return addressOptionsCache[cacheKey];
+
+    const result = await apiRequest("locations",{
+        query:{level,code,parent_type:parentType}
+    });
+    addressOptionsCache[cacheKey] = result.locations;
+    return result.locations;
+
+}
+
+function setAddressOptions(select,locations,placeholder,selectedName=""){
+
+    select.replaceChildren(new Option(placeholder,""));
+    locations.forEach(location=>select.add(new Option(location.name,location.code)));
+    select.disabled = locations.length===0;
+
+    const selected = locations.find(location=>
+        location.name===selectedName || location.code===String(selectedName)
+    );
+    if(selected)select.value = selected.code;
+    return selected?.code || "";
+
+}
+
+function resetAddressSelect(select,placeholder){
+
+    select.replaceChildren(new Option(placeholder,""));
+    select.disabled = true;
+
+}
+
+async function populateAddressSelects(savedAddress={}){
+
+    const regionSelect = document.getElementById("addrRegion");
+    const provinceSelect = document.getElementById("addrProvince");
+    const citySelect = document.getElementById("addrCity");
+    const barangaySelect = document.getElementById("addrBarangay");
+
+    const populateBarangays = async (cityCode,selectedName="")=>{
+        resetAddressSelect(barangaySelect,"Loading barangays...");
+        if(!cityCode){
+            resetAddressSelect(barangaySelect,"Select a city / municipality first");
+            return;
+        }
+        const barangays = await fetchAddressOptions("barangays",cityCode);
+        setAddressOptions(barangaySelect,barangays,"Select a barangay",selectedName);
+    };
+
+    const populateCities = async (parentCode,parentType,selectedCity="",selectedBarangay="")=>{
+        resetAddressSelect(citySelect,"Loading cities / municipalities...");
+        resetAddressSelect(barangaySelect,"Select a city / municipality first");
+        if(!parentCode){
+            resetAddressSelect(citySelect,"Select a province first");
+            return;
+        }
+        const cities = await fetchAddressOptions("cities",parentCode,parentType);
+        const selectedCode = setAddressOptions(citySelect,cities,"Select a city / municipality",selectedCity);
+        if(selectedCode)await populateBarangays(selectedCode,selectedBarangay);
+    };
+
+    const populateProvinces = async (regionCode,selectedProvince="",selectedCity="",selectedBarangay="")=>{
+        resetAddressSelect(provinceSelect,"Loading provinces...");
+        resetAddressSelect(citySelect,"Select a province first");
+        resetAddressSelect(barangaySelect,"Select a city / municipality first");
+        if(!regionCode){
+            resetAddressSelect(provinceSelect,"Select a region first");
+            return;
+        }
+
+        const provinces = await fetchAddressOptions("provinces",regionCode);
+        if(provinces.length){
+            const selectedCode = setAddressOptions(provinceSelect,provinces,"Select a province",selectedProvince);
+            if(selectedCode)await populateCities(selectedCode,"province",selectedCity,selectedBarangay);
+            return;
+        }
+
+        provinceSelect.replaceChildren(new Option("Not applicable (NCR)","NCR"));
+        provinceSelect.value = "NCR";
+        provinceSelect.disabled = true;
+        await populateCities(regionCode,"region",selectedCity,selectedBarangay);
+    };
+
+    regionSelect.addEventListener("change",()=>{
+        populateProvinces(regionSelect.value).catch(error=>showToast(error.message));
+    });
+    provinceSelect.addEventListener("change",()=>{
+        populateCities(provinceSelect.value,"province").catch(error=>showToast(error.message));
+    });
+    citySelect.addEventListener("change",()=>{
+        populateBarangays(citySelect.value).catch(error=>showToast(error.message));
+    });
+
+    const regions = await fetchAddressOptions("regions");
+    const selectedRegion = setAddressOptions(regionSelect,regions,"Select a region",savedAddress.region);
+    if(selectedRegion){
+        await populateProvinces(
+            selectedRegion,
+            savedAddress.province,
+            savedAddress.city,
+            savedAddress.barangay
+        );
+    }
+
+}
+
+async function saveAddress(){
+
+    const recipient = document.getElementById("addrName").value.trim();
+    const phone = document.getElementById("addrPhone").value.trim();
+    const selectedLabel = id=>{
+        const select = document.getElementById(id);
+        return select.value==="NCR" ? "NCR" : select.selectedOptions[0]?.textContent.trim() || "";
+    };
+    const region = selectedLabel("addrRegion");
+    const province = selectedLabel("addrProvince");
+    const city = selectedLabel("addrCity");
+    const barangay = selectedLabel("addrBarangay");
+    const street = document.getElementById("addrStreet").value.trim();
+
+    if(!recipient || !phone || !region || !province || !city || !barangay || !street){
+        showToast("Please complete all address fields.");
+        return;
+    }
+
+    try{
+        const result = await apiRequest("address-save",{
+            method:"POST",
+            body:{recipient,phone,region,province,city,barangay,street}
+        });
+        account = result.user;
+        renderAddressSection();
+        renderCartAddressPreview();
+        showToast("Delivery address saved!");
+
+        if(pendingCheckout){
+            pendingCheckout = false;
+            closeModal("profileModal");
+            await placeOrder();
+        }
+    }catch(error){
+        showToast(error.message);
+    }
+
+}
+
+/* ================= CHECKOUT ================= */
+
+let pendingCheckout = false;
+
+function checkout(){
+
+    if(staticDemo){
+        showToast("Checkout needs PHP/MySQL hosting.");
+        return;
+    }
+
+    if(!account){
+        showToast("Please create an account or sign in first.");
+        closeModal("cartModal");
+        openAccount("create");
+        return;
+    }
+
+    if(!cart.length){
+        showToast("Your cart is empty.");
+        return;
+    }
+
+    if(!account.address){
+        showToast("Add a delivery address to continue checkout.");
+        closeModal("cartModal");
+        pendingCheckout = true;
+        openProfile("address");
+        toggleAddressForm(true);
+        return;
+    }
+
+    placeOrder();
+
+}
+
+async function placeOrder(){
+
+    if(!account){
+        showToast("Please create an account or sign in first.");
+        closeModal("cartModal");
+        openAccount("create");
+        return;
+    }
+
+    if(!cart.length){
+        showToast("Your cart is empty.");
+        return;
+    }
+
+    try{
+        await cartSaveQueue;
+        const result = await apiRequest("order-place",{
+            method:"POST",
+            body:{
+                payment_method:document.getElementById("paymentMethod").value,
+                use_voucher:document.getElementById("useVoucher").checked
+            }
+        });
+        account = result.user;
+        accountVoucherEnabled = Boolean(account?.voucherPercent && account.voucherCode && !account.voucherUsed);
+        orders.unshift(result.order);
+        cart = [];
+        updateCartCount();
+        renderCart();
+        closeModal("cartModal");
+        showToast("Order placed! Track it under My Orders.");
+        openProfile("orders");
+    }catch(error){
+        showToast(error.message);
+    }
+
+}
+
+/* ================= MODALS / TOAST ================= */
+
+function closeModal(id){
+    document.getElementById(id).classList.remove("show");
+}
+
+function showToast(message){
+
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(()=>{ toast.classList.remove("show"); },2200);
+
+}
+
+/* ================= EVENTS ================= */
+
+async function initializeStore(){
+
+    document.getElementById("products").innerHTML = "<p>Connecting to the local database...</p>";
+
+    try{
+        const [productData,sessionData] = await Promise.all([
+            apiRequest("products"),
+            apiRequest("session")
+        ]);
+        if(!productData.products.length)throw new Error("No products found in the local database.");
+
+        products = productData.products;
+        account = sessionData.user;
+        if(account){
+            await loadAccountData();
+        }else{
+            cart = [];
+            orders = [];
+        }
+
+        appReady = true;
+        updateAccountButton();
+        updateCartCount();
+        renderProducts();
+        renderCart();
+    }catch(error){
+        staticDemo = true;
+        appReady = true;
+        account = null;
+        cart = [];
+        orders = [];
+        console.warn("PHP/MySQL API is unavailable; showing the static portfolio demo.",error);
+        document.getElementById("musicPlayer").style.display = "none";
+        updateAccountButton();
+        updateCartCount();
+        renderCart();
+        renderProducts();
+        document.getElementById("products").innerHTML =
+            "<p class=\"static-demo-note\">Portfolio demo: products are shown for display. Accounts and checkout require PHP/MySQL hosting.</p>"
+            + document.getElementById("products").innerHTML;
+    }
+
+}
+
+/* ================= INITIALIZE ================= */
+
+renderDestinations();
+updateAccountButton();
+document.getElementById("wishlistCount").textContent = wishlist.length;
+updateCartCount();
+renderProducts();
+setInterval(advanceProductSlides,3000);
+initializeStore();
+
+</script>
+
+</body>
+</html>
